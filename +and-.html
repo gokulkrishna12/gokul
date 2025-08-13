@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="handleDecrement()">-</button>
+     <h1 id="sample">0</h1>
+    <button onclick="handleIncrement()">+</button>
+   
+
+    <script>
+      var count = 0
+
+      function handleIncrement() {
+        count++
+        document.getElementById("sample").textContent = count
+      }
+
+      function handleDecrement() {
+        count--
+        document.getElementById("sample").textContent = count
+      }
+    </script>
+  </body>
+</html>
+
+<!-- local storage can be store the data upto 4GB,the data we given can be still there after refreshing the page,
+when its gonna clear we mannually close the tab.
+
+cookies stroge can e store the data(mannually) upto 4kb.session storage and cookie stroge can disappeared afrer
+refresh the page. -->

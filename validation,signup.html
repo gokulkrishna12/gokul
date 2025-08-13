@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SINGN UP</title>
+        <link rel="stylesheet" href="valdition,signup.css">
+
+    </head>
+
+      <body class="total">
+
+        <h1 class="h1">Welcome to sathyam cinemas</h1>
+         <div class="alligned">
+             <h3 class="h2">Sign Up</h3>
+             <input type="text" placeholder="Enter your name" class="inputbox" id="input1"><br/>
+             <input type="text" placeholder="Enter your last name" class="inputbox" id="input2"><br/>
+             <input type="text" placeholder="Enter your Username" class="inputbox" id="input3"><br/>
+             <input type="text" placeholder="Enter your Password" class="inputbox" id="input4"><br/>
+             <input type="number" placeholder="Enter your Phonenumber" class="inputbox" id="input5"><br/>
+             <button class="signup" onclick="handleSubmit()">Sign Up</button>
+        </div>
+             
+           <script>
+            
+            function handleSubmit(){
+
+            let fname = document.getElementById("input1").value
+            let lname = document.getElementById("input2").value
+            let username = document.getElementById("input3").value
+            let pass = document.getElementById("input4").value
+            let phnumber= document.getElementById("input5").value
+
+
+            const nameRegex = /^[a-zA-Z\s'-]+$/;
+            const usernameRegex = /^[0-9A-Za-z]{6,16}$/;
+            
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            const phoneRegex =  /^[0-9]{10}$/;
+            
+             
+            if(fname===''|| lname===''|| username===''|| pass===''|| phnumber===''){
+              alert("Please fill the all details");
+              return;
+            }
+
+            if(!nameRegex.test(fname)){
+              alert("first name must contain only letters");
+              return;
+            }
+             if(!nameRegex.test(lname)){
+              alert("last name must contain only letters");
+              return;
+            }
+            if(!usernameRegex.test(username)){
+              alert("username must contain sprecial charcters and numbers");
+              return;
+            }
+            if(!passwordRegex.test(pass)){
+              alert("password must contain special characters");
+              return;
+            }
+            if(! phoneRegex.test(phnumber)){
+              aler("phone number must be contain only number");
+              return;
+            } 
+            else {
+                alert("sign up sucess")
+                localStorage.setItem("username", username)
+                localStorage.setItem("password",pass)
+                window.location.href ="validationlogin.html"
+            }
+           
+        }
+        
+
+           
+           
+         </script> 
+     </body>
+</html>

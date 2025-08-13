@@ -1,0 +1,88 @@
+</DOCTYPE>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+
+        <input type="text" id="input1"/>
+        <input type="text" id="input2"/>
+        <button onclick="add()">add</button>
+        <button onclick="sub()">sub</button>
+        <button onclick="mul()">mul</button>
+        <button onclick="div()">div</button>
+        <button onclick="mod()">mod</button>
+        <button onclick="pow()">pow</button>
+        <h2 id="addans"></h2>
+        
+
+
+    <script>
+
+        
+
+        function add(){
+            let a = document.getElementById("input1").value
+            let b = document.getElementById("input2").value
+            let add = parseInt(a) + parseInt(b)
+            console.log(add);
+            document.getElementById("addans").textContent = add
+            
+        }
+
+        function sub(){
+          let c = document.getElementById("input1").value
+            let d = document.getElementById("input2").value   
+            let sub = parseInt(c) - parseInt(d)
+            console.log(sub);
+           document.getElementById("addans").textContent = sub
+        }
+
+        function mul(){
+             let e = document.getElementById("input1").value
+            let f = document.getElementById("input2").value   
+            let mul = parseInt(e) * parseInt(f)
+            console.log(mul);
+            document.getElementById("addans").textContent = mul
+        }
+        
+        function div(){
+              let g = document.getElementById("input1").value
+            let h = document.getElementById("input2").value   
+            let div = parseInt(g) / parseInt(h)
+            console.log(div);
+            document.getElementById("addans").textContent = div
+        }
+
+         function mod(){
+
+            let A  = document.getElementById("input1").value
+            let B = document.getElementById("input2").value   
+            let mod = parseInt(A) % parseInt(B)
+            console.log(mod);
+            
+            document.getElementById("addans").textContent = mod
+        }
+        
+        function pow(){
+             let A  = document.getElementById("input1").value
+            let B = document.getElementById("input2").value   
+            let c = parseInt(A) ** parseInt(B)
+           console.log(c);
+           
+            
+            document.getElementById("addans").textContent = c
+        }
+            
+        
+
+
+
+    </script>
+
+
+
+    </body>
+</html>

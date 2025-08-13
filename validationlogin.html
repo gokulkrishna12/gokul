@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title>LOGIN</title>
+     </head>
+
+    <body>
+
+        <h2>WELCOME</h2>
+
+    <div>
+
+        <input type="text" placeholder="Enter your usernmae" id="input1"><br/>
+        <input type="text" placeholder="Enter your password" id="input2"><br/>
+        <button onclick="handleSubmit()">login</button>
+        
+    </div>
+
+    <script>
+          
+          function handleSubmit(){
+
+            let loginusername=document.getElementById("input1").value
+            let loginpass=document.getElementById("input2").value
+            let signupuser=localStorage.getItem("username")
+            let signuppass=localStorage.getItem("password")
+
+            if(loginusername === '' || loginpass === ''){
+                alert("plesase fill the all details")
+            }else if(signupuser === loginusername && signuppass===loginpass){
+                alert("login sucess")
+
+            }else{
+                alert("Invalid username or password")
+            }
+
+          }
+
+
+
+
+
+    </script>
+    
+
+
+    </body>
+</html>
