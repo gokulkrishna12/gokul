@@ -8,8 +8,8 @@
 
       <body class="total">
 
-        <h1 class="h1">Welcome to sathyam cinemas</h1>
-         <div class="alligned">
+        <h1 class="h1">Welcome to green cinemas</h1>
+      <div class="alligned">
              <h3 class="h2">Sign Up</h3>
              <input type="text" placeholder="Enter your name" class="inputbox" id="input1"><br/>
              <input type="text" placeholder="Enter your last name" class="inputbox" id="input2"><br/>
@@ -31,7 +31,8 @@
 
 
             const nameRegex = /^[a-zA-Z\s'-]+$/;
-            const usernameRegex = /^[0-9A-Za-z]{6,16}$/;
+            const usernameRegex = /^[a-zA-Z][a-zA-Z0-9_]{4,19}$/;
+            
             
             const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
             const phoneRegex =  /^[0-9]{10}$/;
@@ -51,15 +52,15 @@
               return;
             }
             if(!usernameRegex.test(username)){
-              alert("username must contain sprecial charcters and numbers");
+              alert("username must contains above five letters and no with special character");
               return;
             }
             if(!passwordRegex.test(pass)){
-              alert("password must contain special characters");
+              alert("password must contain 8 above characters");
               return;
             }
-            if(! phoneRegex.test(phnumber)){
-              aler("phone number must be contain only number");
+            if(!phoneRegex.test(phnumber)){
+              aler("phone number must be 10 valid number");
               return;
             } 
             else {
